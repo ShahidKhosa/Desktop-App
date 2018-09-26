@@ -1,0 +1,74 @@
+Useful Commands:
+
+To check Magento2 Version
+php bin/magento --version
+
+To check indexer status
+php bin/magento indexer:status
+
+To Re-index
+php bin/magento indexer:reindex
+
+To show indexer modes
+php bin/magento indexer:show-mode
+
+To set indexer modes (From update on save to update by schedule)
+php bin/magento indexer:set-mode schedule INDEXER_NAME
+Ex: php bin/magento indexer:set-mode schedule catalog_product_category
+
+To set indexer modes (From update by scedule to update on save)
+php bin/magento indexer:set-mode realtime INDEXER_NAME
+Ex: php bin/magento indexer:set-mode realtime catalog_product_category
+
+To run the cron
+php bin/magento cron:run
+
+To enable cache
+php bin/magento cache:enable
+
+To disable cache
+php bin/magento cache:disable
+
+To check Cache status
+php bin/magento cache:status
+
+For Flushing Cache
+php bin/magento cache:flush
+
+For Cleaning Cache
+php bin/magento cache:clean
+
+For Compilation
+php bin/magento setup:di:compile
+
+For Compilation(If you have multi-tenant)
+php bin/magento setup:di:compile-multi-tenant
+
+For Upgrading: When we make any changes/install/set up in magento module you have to execute this command. Once this command execution completes, this will ask to run the compilation command.
+
+php bin/magento setup:upgrade
+
+To check Magento Mode: production/default OR developer
+php bin/magento deploy:mode:show
+
+php bin/magento deploy:mode:set developer
+php bin/magento deploy:mode:set production
+
+To check Magento Module Status
+php bin/magento module:status
+
+To deploy static view files
+php bin/magento setup:static-content:deploy
+
+
+
+
+
+
+To get full list of Magento commands: 
+php bin/magento --list
+
+To get to know abount any Magento command: 
+
+php bin/magento –help command  
+Ex: php bin/magento –help setup:upgrade
